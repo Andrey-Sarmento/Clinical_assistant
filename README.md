@@ -8,7 +8,7 @@ The main entry point is the function **`avaliar_prontuario()`**, which takes a c
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Andrey-Sarmento/clinical_assistant.git
+git clone https://github.com/Andrey-Sarmento/Clinical_assistant.git
 cd clinical_assistant
 ````
 
@@ -70,7 +70,7 @@ O paciente foi submetido a algum procedimento cirúrgico?  |  Sim             | 
 
 ## Notes
 
-* The model is distributed in TorchScript format (`model_traced.pt`), so the architecture details are hidden.
+* The model is distributed in TorchScript format (`model_traced.pt`).
 * Only `torch` and `pandas` are required beyond Python’s standard library.
 * Example clinical notes are provided in the `Dados` folder for testing.
 

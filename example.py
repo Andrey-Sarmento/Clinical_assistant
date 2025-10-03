@@ -1,12 +1,12 @@
-# Carrega função principal
+# Import the main function
 from Python.Predict import avaliar_prontuario
 
-# Carrega um exemplo de prontuário da pasta Dados
+# Load a sample clinical note from the folder "Dados"
 with open("Dados/Teste1.txt", encoding="utf-8") as f:
     pront_teste = f.read()
 
-# Primeiros caracteres do prontuário
+# First characters of the medical record
 pront_teste[:300]
 
-# Usa a função principal
+# Use the main function
 saida = avaliar_prontuario(pront_teste)
