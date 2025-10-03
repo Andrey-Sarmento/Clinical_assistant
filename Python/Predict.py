@@ -1,4 +1,6 @@
-# predict.py
+# --------------------------------------------------
+# Bibliotecas
+# --------------------------------------------------
 import torch
 import torch.nn.functional as F
 import pandas as pd
@@ -29,8 +31,6 @@ def normalizar_prontuario(x):
     x = re.sub(r'\n+', '\n', x)
     return x.strip()
 
-
-
 # --------------------------------------------------
 # Carregar modelo traçado
 # --------------------------------------------------
@@ -41,7 +41,7 @@ _ = model.eval()
 # --------------------------------------------------
 # Função de avaliação
 # --------------------------------------------------
-def avaliar_prontuario(pront_teste, delta=20):
+def avaliar_prontuario(pront_teste, delta=10):
 
     perguntas = [
         "O paciente tem doença falciforme?",
