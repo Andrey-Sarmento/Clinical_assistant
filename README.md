@@ -1,12 +1,7 @@
-Here’s a clean **README.md** draft for your repo, in English:
-
-````markdown
 # Clinical Assistant
 
 This repository provides a simple interface to run predictions on clinical notes using a pre-trained model.  
 The main entry point is the function **`avaliar_prontuario()`**, which takes a clinical record (string) as input and returns a table with the predicted answers to eight standardized clinical questions.
-
----
 
 ## Installation
 
@@ -58,7 +53,6 @@ Pergunta                                                  |  Pred            |  
 O paciente tem doença falciforme?                         |  Não             |  1.000 |  s vaso-oclusivas. Não há evidência de doença falciforme. O quadro laboratorial i
 O paciente teve internações hospitalares?                 |  Sem informação  |  0.998 |  de infecção local. Durante a internação não houve necessidade de transfusão sa
 O paciente foi submetido a algum procedimento cirúrgico?  |  Sim             |  1.000 |  os estáveis. Cirurgia: colecistectomia videolaparoscópica realizada com sucesso.
-...
 ```
 
 ### Explanation of columns:
@@ -81,8 +75,3 @@ O paciente foi submetido a algum procedimento cirúrgico?  |  Sim             | 
 * Example clinical notes are provided in the `Dados` folder for testing.
 
 ---
-
-```
-
-Would you like me to also include a **“Quick Start” block** at the very top (like 5 lines of code only), so non-technical users can just copy/paste and run?
-```
