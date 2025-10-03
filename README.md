@@ -1,6 +1,6 @@
 # Avaliador de Prontuários (Modelo REDS)
 
-Este repositório contém um modelo treinado em PyTorch (TorchScript) para avaliação automática de prontuários médicos simulados.
+Este repositório contém um modelo treinado para avaliação automática de prontuários médicos simulados.
 
 ## Instalação
 
