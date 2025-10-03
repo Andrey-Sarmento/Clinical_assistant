@@ -1,73 +1,20 @@
-Registro Clínico – Atendimento Ambulatorial Complexo
+==Prontuario==
+Paciente do sexo masculino, 45 anos, residente no Sudeste, foi admitido para avaliação clínica complexa com queixa de dor difusa e alterações funcionais recentes. O plantão de enfermagem descreve boa cooperação, orientação preservada e linguagem adequada, com preparo para internação hospitalar. O ambiente hospitalar local é de complexo terciário, com recursos de urgência e ambulatório integrado. A história pregressa é marcada por episódios de internação prévia e uma cirurgia abdominal anterior, sem registro de aloação de medicações imunossupressoras de uso contínuo. O quadro atual revela ritmo cardíaco regular, PA 126/82 mmHg, FC 78 bpm, FR 16 irpm e SpO2 97% em ar ambiente. No exame físico, o estado geral é estável, sem sinais explícitos de choque, com moderada dor abdominal difusa que responde a analgesia parenteral. Durante a admissão de 03/2023, permaneceu internado 7 dias na enfermaria sob diagnóstico de dor aguda, com necessidade de analgesia IV.
 
-Data do registro: 12/07/2025
-Unidade: Centro de Atenção Integral à Saúde do Adulto (CAISA) – Ala Neurológica
-Profissional responsável: Dra. Luciana N. Freitas – CRM-SP 124589
+O atendimento clínico iniciou com monitorização contínua, ECG de 12 derivposições, e coleta de exames básicos: hemograma completo (CBC), função renal (creatinina), eletrólitos e gasometria venosa. O CBC mostrou haematócrito dentro da normalidade para idade, leucócitos levemente elevados sem desviación imuno. A função renal manteve-se estável, sem hipercetoniêmia ou nefropatia evidente. A glicemia de jejum foi monitorada, com tendência a valores próximos ao limite superior da normalidade. A equipe de enfermagem manteve protocolo de antibioticoterapia apenas se aparecessem sinais de infecção; neste momento, não houve indicação de antibiótico de forma rotineira, alinhando-se a uma conduta conservadora até definição diagnóstica. A comunicação com o serviço de dietética orientou dieta hiperproteica leve, com ingestão oral estimulada e reposição de líquidos via via venosa conforme necessidade.
 
-Identificação do paciente:
-Mulher de 42 anos, natural de Sorocaba (SP), residente atualmente em Itapecerica da Serra, encaminhada pela Unidade Básica de Saúde do bairro Parque Paraíso para acompanhamento ambulatorial com equipe multiprofissional especializada em distúrbios neurológicos e reabilitação motora.
+Em 10/2022, realizou cirurgia de colecistectomia videolaparoscópica sem intercorrências. O evento cirúrgico, programado de forma eletiva, ocorreu sob anestesia geral com tempo operatório breve. O pós-operatório imediato apresentou recuperação com volução da dor para níveis controláveis e mobilização precoce, sem fístulas ou complicações intraoperatórias relatadas. O registro cirúrgico complementa que não houve necessidade de transfusão intraoperatória e que a evolução foi estável na enfermaria cirúrgica. A avaliação clínica pós-operatória manteve o perfil hemodinâmico estável, com tolerância à alimentação oral gradualmente retomada e disciplina de analgesia escalonável.
 
-Motivo do encaminhamento:
-Quadro neurológico crônico pós-acidente vascular cerebral, com sequelas motoras em hemitronco esquerdo e comprometimento leve da linguagem expressiva. Avaliação neurológica de seguimento solicitada pela médica da família, Dra. Ana Elisa Rezende, após queixas recorrentes de espasmos noturnos e dificuldades no sono.
+No histórico de manejo terapêutico, não há registro de transplante de células-tronco hematopoéticas. Transplante_medula_ossea tem status de nao, conforme dados institucionais prévios, sem indicação clínica atual e sem referência de imunossupressão de uso crônico. Não foram identificadas terapias de quelação de ferro ou transfusões crônicas em curso no prontuário recente. Embora não haja dados específicos sobre quelação, a equipe de hematologia local não indicou complicações hematológicas que exigissem quelantes no momento. As enzimas e o metabolismo são acompanhados por meio de exames laboratoriais de rotina. A macro e a microalbuminúria não estão relatadas no momento como área de foco, mantendo-se sem informações em relação a urinálise com albumina medida no registro atual; a equipe clínica acompanha sinais de microalbuminúria apenas quando houver indicação.
 
-Histórico clínico:
-A paciente sofreu um AVC isquêmico extenso em território da artéria cerebral média direita em outubro de 2022, confirmado por tomografia computadorizada de crânio realizada no Hospital Geral de Itapecerica. O evento agudo exigiu internação hospitalar por 12 dias, dos quais quatro foram na unidade semi-intensiva, com suporte clínico e monitoramento contínuo. Durante esse período, não houve necessidade de intervenção neurocirúrgica nem ventilação mecânica. O foco da internação foi o controle da hipertensão reativa, monitoramento de sinais de aumento de pressão intracraniana (não evidenciado) e início precoce da reabilitação funcional.
+Ao longo da internação, a vigilância de neurovasculatura incluiu avaliação neurológica periódica e monitoramento vascular em contextos clínicos apropriados. Até o momento, não houve quadro de AVC ou infarto no histórico recente. Não houve AVC/infarto arterial no acompanhamento recente. Esse dado é corroborado pela ausência de déficit focal recente, normalização de exames de função cerebral sempre que solicitado, e pela estabilidade clínica.
 
-Antes do evento vascular, a paciente não apresentava antecedentes relevantes de hospitalização ou comorbidades significativas além de hipertensão arterial leve (controlada com losartana 50 mg/dia) e episódios esporádicos de cefaleia tensional. Nega qualquer histórico de cirurgias prévias, inclusive ginecológicas ou ortopédicas. Também não se submeteu a nenhum transplante ao longo da vida, seja de órgãos sólidos ou tecidos hematopoiéticos.
+No que se refere a hormônios e metabolismo, o paciente apresentou padrão estável de TSH e T4 livre em faixa adequada, sem sinais de hipotireoidismo clínico que pudesse explicar a fadiga ou a dor. O controle de dor foi mantido com analgesia multimodal, incluindo anti-inflamatórios não esteroidais quando apropriado, com avaliação da função renal após cada ciclo terapêutico. O serviço de enfermagem observou adesão às orientações de jejum pré-operatório quando houve necessidade de procedimentos e, posteriormente, reintrodução gradativa de dieta.
 
-Histórico medicamentoso:
-Atualmente faz uso contínuo de:
+A equipe multidisciplinar manteve diálogo com fisioterapia e analgesia, buscando reabilitação precoce. A nutrição recomendou aporte calórico adequado, com foco em proteína de alto valor biológico, para auxiliar na recuperação. O paciente participou de orientações sobre repouso relativo, higiene mecânica, e prevenção de complicações venosas. O cardiologista consultado periódicamente avaliou o ritmo e funcionabilidade cardíaca, sem alterações relevantes que exigissem intervenção aguda. O serviço de enfermagem registrou presença de diurese adequada, sem sinais de edema agudo de pulmão ou alterações significativas no peso de 2 semanas. Em termos de exames complementares, um ecocardiograma transtorácico simples foi realizado, sem alterações estruturais relevantes, reforçando o prognóstico estável.
 
-* Losartana 50 mg – 1x ao dia
-* AAS 100 mg – 1x ao dia
-* Fluoxetina 20 mg – 1x ao dia
-* Suplemento de ômega 3 (uso por conta própria)
+A partir de uma abordagem de cuidado centrada no paciente, o serviço de psicologia prestou suporte para manejo de ansiedade pré-operatória e adaptação à vida cotidiana com limitações transitórias. A família permaneceu envolvida, com orientações sobre sinais de alerta, como piora da dor abdominal, febre, vômitos persistentes ou sangramento, que exigiriam retorno imediato. O prontuário registra que o paciente está clinicamente estável, com tendência de recuperação adequada. As condutas laborais do setor de enfermagem seguiram protocolos de profilaxia de infecção, higiene das mãos e monitorização de sinais vitais em intervalos regulares. O terapeuta ocupacional, quando pertinente, realizou atividades simples de reabilitação para manter a autonomia funcional.
 
-A paciente nunca utilizou quelantes de ferro em nenhuma circunstância, mesmo durante o período de internação. Segundo relato da própria paciente e revisão do prontuário hospitalar, não houve indicação hematológica que justificasse esse tipo de prescrição.
+Ao final do período de observação, o quadro permaneceu estável, com alta clínica programada para o dia seguinte, sujeita a avaliação de exames complementares de rotina. A equipe de coordenação de alta providenciou plano de continuidade do cuidado, incluindo medicações orais descritas com dosagem e posologia adequada, além de encaminhamentos para acompanhamento ambulatorial. O período de internação foi utilizado para ajustes terapêuticos, revisão de alergias conhecidas, e revisão de higiene pessoal e alimentação. O registro de enfermagem descreve a evolução clínica como favorável, com alívio parcial da dor e sem eventos adversos graves. Não houve complicação circulatória notável durante a admissão, e a função respiratória manteve-se estável.
 
-Exames laboratoriais:
-Últimos exames realizados pela paciente foram em março de 2025, como parte do acompanhamento periódico na UBS:
-
-* Hemograma completo: dentro da normalidade
-* Glicemia de jejum: 95 mg/dL
-* Creatinina: 0,9 mg/dL
-* TGO/TGP: sem alterações
-* Ferritina: 87 ng/mL
-
-Não há registros nem evidência de que a paciente tenha realizado exames de urina com dosagem de albumina, seja por método de fita reagente ou quantificação em laboratório. Essa informação foi confirmada durante a anamnese e também pela ausência de tal exame no histórico laboratorial dos últimos dois anos.
-
-Evolução neurológica:
-Desde o evento vascular, a paciente iniciou reabilitação motora com fisioterapeuta especializado e terapia ocupacional semanal. Apresenta paresia residual moderada em membro superior esquerdo e marcha ligeiramente assimétrica, com discreto arrasto do pé esquerdo. Capacidade cognitiva preservada, com leve dificuldade de recuperação lexical durante a fala.
-
-Relata episódios de espasmos musculares em repouso, especialmente à noite, e formigamentos esporádicos na mão esquerda. Queixa-se também de ansiedade noturna e dificuldade de manter o sono, além de sentimentos recorrentes de insegurança em ambientes públicos devido à instabilidade do equilíbrio.
-
-Exame físico (realizado em consultório):
-
-* Estado geral: consciente, orientada em tempo e espaço, cooperativa
-* PA: 128x82 mmHg
-* FC: 76 bpm
-* FR: 18 irpm
-* Temperatura: 36,6 °C
-* Força muscular (MRC):
-
-  * Membro superior direito: 5/5
-  * Membro superior esquerdo: 3/5
-  * Membro inferior direito: 5/5
-  * Membro inferior esquerdo: 4/5
-* Reflexos osteotendinosos: exaltados à esquerda, normais à direita
-* Sensibilidade: preservada
-* Fala: leve anomia; compreensão intacta
-* Marcha: com base levemente alargada, sem uso de dispositivos auxiliares
-
-Conduta e orientações:
-
-* Solicitação de nova tomografia de crânio para controle evolutivo
-* Encaminhamento para grupo de apoio psicossocial (CAPS)
-* Introdução de clonazepam 0,25 mg à noite para controle dos espasmos noturnos, com reavaliação em 15 dias
-* Manutenção do plano de reabilitação funcional em curso
-* Orientações reforçadas quanto à importância da adesão medicamentosa e ao seguimento neurológico periódico
-
-Observações adicionais:
-Paciente expressa desejo de retomar atividades ocupacionais em meio período. Encaminhada para avaliação funcional no setor de Fisiatria da unidade e para parecer da Assistente Social.
-
-Nova consulta de retorno agendada para 05/08/2025.
+O prontuário final reflete uma evolução clínica compatível com uma internação excepcionalmente estável, associada à cirurgia prévia sem intercorrências, e com educação terapêutica entregue ao paciente. O time multidisciplinar permanece disponível para esclarecimentos, com foco na prevenção de reincidência de dor aguda, na adequação de atividades diárias, e na adesão ao plano terapêutico. A comunicação com a família foi contínua, com documentação de consentimento informado para todos os procedimentos realizados. O consultório externo está programado para avaliação em sequência, com retornos agendados e orientações de alerta para sinais de alerta radicais.
