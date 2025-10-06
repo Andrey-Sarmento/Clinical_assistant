@@ -23,13 +23,15 @@ def fix_len(seq, target_len, pad=0):
     return seq[:target_len]
 
 
-def normalizar_prontuario(x):
-    x = x.lower()
-    x = unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').decode('utf-8')
-    x = re.sub(r'(\r\n|\r|\n|\\n)+', '\n', x)
+def normalizar_prontuario(x, unicode=True):
+    if unicode:
+        x = x.lower()
+        x = unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').decode('utf-8')
+    x = re.sub(r'(\r\n|\r|\n|\\n)+', '. ', x)
     x = re.sub(r'[ \t]+', ' ', x)
-    x = re.sub(r'\n+', '\n', x)
+    x = re.sub(r'\.\s*\.+', '.', x)
     return x.strip()
+
 
 # --------------------------------------------------
 # Carregar modelo traçado
@@ -78,7 +80,7 @@ def avaliar_prontuario(pront_teste, delta=10):
         # extrai janela de texto em torno do token j
         start = max(0, 2*(2*(2*j+1)+1)+1 - delta)
         end   = min(len(pront_teste), 2*(2*(2*j+7)+7)+5 + delta)
-        frase = pront_teste[start:end]
+        frase = normalizar_prontuario(pront_teste, unicode=False)[start:end]
         frase = frase.replace("\n", " ")       # remove quebras de linha
         frase = " ".join(frase.split())        # normaliza espaços em branco
 

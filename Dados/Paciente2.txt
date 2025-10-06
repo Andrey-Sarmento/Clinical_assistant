@@ -1,0 +1,124 @@
+Paciente 73038318344
+
+CABEÇALHO DA CONSULTA 
+
+## AMBULATÓRIO DE HEMOGLOBINOPATIAS ##             
+## AMBULATÓRIO DE HEMOGLOBINOPATIAS ##              
+
+Id: 30 anos, natural e procedente de São Paulo; solteira; sem filhos; não trabalha; nível superior completo (Biologia) e cursa atualmente Administração; sem restrição a regime transfusional.                           
+                 
+# HD:                              
+1 - Anemia falciforme HbSS (Diagnóstico aos 2 meses)            
+2 - AVCi prévio (2007) com 16 anos - sem sequelas            
+3 - Necrose de cabeça de fêmur direito (2008) com artrose secundária / Sem cirurgia prévia / Segue na ortopedia HC: indicação de procedimento cirúrgico (aguardando fila)            
+4 - Colecistectomia 2008            
+5 - Sobrecarga férrica transfusional            
+6 - Crise vaso-oclusiva ultima em abril/23            
+7 - Vit B12 (jan/180; maio 485; set/21 348; Out/23 308) - anti-célula parietal não reagente            
+8 - Auto-esplenectomia            
+                 
+# Família: 5 irmãos - 1 irmã (12 anos mais nova - anemia falciforme segue no ITACI), 1 irmão de 18a com traço, restante não                 
+                 
+# Regime transfusional:                 
+ - Profilaxia secundária de AVCI (nos 3 primeiros anos HbS < 30% e Hb > 9 / após 3 anos sem eventos HbS <45-50%)            
+- Segue em programa transfusional: sangria 500 ml + 2 CHFF a cada 4 semanas em redução de HbS para <50%            
+    
+         
+- 20/01/23: HbS Pré 50,7% / Pós 31,7%            
+- 03/03/23: Pré 59,8% / Pós 39,7%            
+- 31/03/23: Pré 54,5% / Pós 35,6%            
+- 27/04/23: Pré 42% / Pós 25,7%            
+- 31/05/23: Pré 45,6%/Pós 34,6%            
+-09/08/23: Pré 49,3% / pós 36,1%            
+- 14/09/23: Pré 49,9% / pós 37,8%              
+-18/10/23: Pré 50,2%/ Pós 32,7%           
+- 16/11/23: Pré 40%/ pós -          
+- 21/12/23: Pré 41% / pós 30,2%         
+- 17/01/24: Pré 40% / pós 28,7%       
+- 23/2/24: HbS 48,3% / 35,3%          
+- 20/03/24: Pré  44,2% / Pós 33,1%       
+- 04/07/24: Pré 45,8% / Pós 33,4%     
+ -31/07/24:  Pré 41,1% / Pós 30,8%     
+- 28/08/2024: pré 39,2 / pós 27,6             
+- 26/09/2024: Pré 35,9% / pós 26,7%   
+- 24/10/24; Pré 38,9 / Pós 30,8 
+  
+# Medicações em uso:       
+Deferasirox (Exjade) 2000 mg/dia (32,7 mg/kg/dia) - audiometria (07/11/24): normal  
+                
+                 
+# Lesão de órgão-alvo, exames de rastreio mais recentes:                 
+- FO 13/11/24 - normal            
+-ECOTt( 20/08/24 ) :Pressão sistólica da artéria pulmonar estimada em 28 mmHg (VR < 35 mmHg), a pressão no átrio direito em 3 mmHg e a velocidade máxima do refluxo tricúspide de 2.5 m/s (VR = 2,8 m/s). A veia    
+cava inferior apresenta diâmetro de 18 mm e variação respiratória > 50 %.Septo interatrial redundante sem presenca de fluxo transeptal.    
+- Proteinúria: 22/06/2022: 0,13 g/24h // Rel Prot/Cr: 0,23 g/g  // (12/04/23): 0,16g/24h // 05/09/23: Ptn 0,13g/24h (P/C 0,19g/gcr) // 08/2024: P/c 0,29g/g            
+- Fígado: Sobrecarga de ferro em RM 01/2019                     
+        
+ # Evolução:  Comparece em consulta após 1 mês. Nesse período, realizado audiometria sem alterações. Nega novos episódios de zumbido.  
+Ainda aguarda RM de abdome - solicitada há 3 meses.  
+Transfusão de troca a cada 4 semanas. última em 26/10/24  
+Aguarda cirurgia para osteonecrose de quadril direito. 
+   
+ # Ao exame:        
+Peso 61kg PA 109/66  Altura 1,75 , ictérica     
+RCR, 2T, BCNF, sem sopros        
+MV + em AHT, sem RA        
+Abdomen plano, flácido, depressível, indolor, sem VMG;        
+Extremidades bem perfundidas, sem edema, sem sinais de TVP, sem lesões de pele.          
+            
+# Sobrecarga de ferro:                 
+- RM abdome superior 09/06/18: Fígado: A técnica de relaxometria foi limitada pelo grau de depósito de ferro, obtendo-se valores estimados de R2* de cerca de 560 s-1 (normal < 60 s-1), destacando-se que estes resultados estão provavelmente subestimados. Rins: Dimensões aparentemente aumentadas, com sinais de deposição férrica cortical bilateral. Cisto renal no polo superior esquerdo.               
+- RM Coração 31/01/19: Avaliação do T2* do miocárdio estimado de 30 ms. (Valores abaixo de 20 ms são compatíveis com depósito de ferro miocárdico. Valores abaixo de 10 ms são compatíveis com depósito de ferro miocárdico importante).                     
+                             
+# Laboratório:    
+ 18/11/24: Hb 9,1 / Ht 24,9 / VCM 83,5 / HCM 30,7 / Leuco 9,49 / Neut 30,3%-2900 / Eosi 0,3% / Baso 2,2% / Linf 59,8%-5700 / Mono 7,4% / Plaq 433,6 mil/ret 233.000 
+ 
+21/10/24: Hb 9,4 / Ht 23,5 / VCM 83,5 / HCM 33,5 / Leuco 6,70 / Neut 52,4% / Eosi 0,1% / Baso 4,5% / Linf 29,7% / Mono 13,3% / Plaq 434,1 mil  
+-23/09: Hb 9,4 / Ht 25,3 / VCM 87,2 / HCM 32,5 / Leuco 6,22 / Neut 59,1% / Eosi 0,2% / Baso 3,9% / Linf 23,1% / Mono 13,7% / Plaq 444,0 mil  
+17/09: Hb 9,9 / Ht 29,2 / VCM 94,8 / HCM 32,1 / Leuco 6,65 / Neut 34,7% / Eosi 3,9% / Baso 1,2% / Linf 48,3% / Mono 11,9% / Plaq 587 mil / Ret.C 4,92 % / Ret.Absoluto 151 mil / Cr 0,38 / Ur 8,0 / AST 38 / ALT 27 / BT 7,20 / BD 0,5 / BI 6,7 / FA 92 / GGT 30 / Lipa 16 / VitB12 251 / AcFolico 3,9 / SatTransf 58 % / Ferro 129 / Ferro 222 / Ferritina 3288,83 / Transf 58 / Transf 158 / CTLF 222  
+- 23/09/2024: Hb 9,4 Ht 25,3 Leuco 6220 n 3700 linf 1400 plaq 444mil  ret 197mil    
+- 17/09/2024: Hb 9,9 Ht 29,2 Leuco 6650 n 2310 linf 3210 CTLF 222  Ur 8 VitB12 251 plaq 587mil DHL 441 Lipase 16 ac fólico 3,9 TGP 27 FA 92TGO 38 BI 6,7 BT 7,2 Ferro 129 Sat transferrina 58%  Cr 0,38 Ferritina 3288,83 GGT 30    
+- 26/08/24: Hb 9,6 / Ht 23,5 / Leuco 6,42 / Neut 54,0% / Eosi 0,1% / Baso 4,9% / Linf 29,6% / Linf.Abso 1,9 / Mono 11,5% / Plaq 417,3 mil    
+- 23/08/24: Ur 9,0 / AST 38 / ALT 23 / BT 8,32 / BD 0,4 / BI 7,9 / FA 91 / GGT 31 / Ferritina 3120,25 / Transf 152 / Creat.U 0,94 / Prot.U 0,3 / P/C.U 0,29      
+ 
+CONDUTA:  # Exames de imagem:        
+- Usg axilar (01/08/23): Linfonodos de morfologia habitual, hilo presente e cortical fina na axila direita medindo até 2,7 cm, em correspondência com a queixa palpável da paciente.de aspecto habitual na axila direita.    
+   
+-ECOTt( 20/08/24 ) :Pressão sistólica da artéria pulmonar estimada em 28 mmHg (VR < 35 mmHg), a pressão no átrio direito em 3 mmHg e a velocidade máxima do refluxo tricúspide de 2.5 m/s (VR = 2,8 m/s). A veia   
+cava inferior apresenta diâmetro de 18 mm e variação respiratória > 50 %.Septo interatrial redundante sem presenca de fluxo transeptal.      
+    
+#Impressão: Trata-se de paciente com diagnostico de anemia falciforme, com história de AVCi e necrose de cabeça de femur. Em programa transfusional: sangria 500 ml + 2 CHFF a cada 4 semanas em redução de HbS para <50%.   
+ 
+CONDUTA:  
+Conduta Conforme discutido com Dr. Igor 
+- Mantemos quelação de ferro  
+- Aguarda consulta com pneumo agendada para janeiro/2025 
+- Prescrevo transfusão de troca (sangria de 500 mL seguida de transfusão de 2 CHFF);    
+- Aguarda RM de fígado;  
+- Retorno em 4 semanas   
+ 
+Mariana W R4 HH 
+
+HISTÓRIA
+
+TIPO DE ATENDIMENTO: 
+•  Consulta de rotina: ,,
+
+MEDICAÇÃO ATUAL
+
+• CHF, 2u, Via Intra-Venosa
+• sangria terapêutica, 500ml
+• soro fisiológico 0,9%, 250ml, Via Intra-Venosa
+• soro fisiológico 0,9%, 500ml, Via Intra-Venosa
+
+DIAGNÓSTICO
+
+DOENÇA FALCIFORME: 
+•  Anemia Falciforme: ..
+
+TRATAMENTO E CONDUTA
+
+• CHF, 2u, Via Intra-Venosa
+• sangria terapêutica, 500ml
+• soro fisiológico 0,9%, 250ml, Via Intra-Venosa
+• soro fisiológico 0,9%, 500ml, Via Intra-Venosa

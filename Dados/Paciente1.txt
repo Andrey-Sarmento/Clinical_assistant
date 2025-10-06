@@ -1,0 +1,163 @@
+Paciente 73038395772
+CABEÇALHO DA CONSULTA 
+
+# Ambulatório Hemoglobinopatias # 
+
+# ID, 33 anos, natural e procedente de São Paulo - SP, graduação em ciências contábeis, atualmente 
+desempregado. 
+ 
+1) SB0 Talassemia- Doença da hemoglobina S-beta-talassemia 
+- Dx aos 3 anos de idade
+- EFHb 10/01/2022: HbA1 4,3% / HbA2 5,2% / HbF: 5,7% / HbS: 84,8%  
+ 
+> Complicações relacionadas à doença:
+- Síndrome hiper-hemolítica em jul/ago 2023 após transfusão em PS   
+- Colecistectomia aos 9 anos 
+- Esplenectomia aos 9 anos 
+- Necrose asséptica da cabeça do fêmur em 2009 / necrose asséptica em úmero esquerdo em
+- Priapismo desde os 15 anos (especialmente no frio - 10x no ano), ago/23 --> novo episódio em 02/24
+- Sobrecarga secundária de ferro documentada desde 2019.
+
+> Rastreio de complicações:
+- Oftalmopatia:
+FO (04/09/19): Normal   
+FO (27/06/22): Aumento da tortuosidade vascular, sem sinais de hemorragia ou neovascularização da retina.   
+Aguarda novo F.O.
+FO em 22/04/2024: Sem alterações   
+Realizou FO em 22/04/2024: Sem alterações   
+   
+- Audição:   
+Audiometria (08/23): normal.
+Audiometria (fev/21): normal
+
+- Cardiopatia: 
+ECOTT (21/07/23): FEVE 72%. Pressão sistólica da artéria pulmonar não estimada devido ao tênue sinal 
+do refluxo tricúspide. Ausência de sinais indiretos de hipertensão pulmonar significativa.   
+ECOTT (22/09/20): FEVE 69%. Pressão sistólica da artéria pulmonar não estimada devido ao tênue sinal 
+do refluxo tricúspide 
+ECOTT (28/jan/22): FEVE 69%. Pressão sistólica da artéria pulmonar não estimada devido ao tênue sinal 
+do refluxo tricúspide 
+   
+- Nefropatia:  
+Microalbuminúria (07/2022): < 3 mg/dL (relação não-calculável) 
+Proteinúria 24hrs (Fev/23): ausente  
+ Microalbuminuria (14/10/2024): < 0.5   
+  
+- Sobrecarga de ferro:   
+RM  Abdome (02/10/19): Análise: Fígado de morfologia habitual, com deposição acentuada e difusa de 
+ferro no parênquima, obtendo-se valores de R2* estimados em 1080 s-1 (normal < 120 s-1 - 3T) pela 
+relaxometria. Não foi caracterizada esteatose, com fração de gordura estimada em 0 % (normal < 6 %). 
+RM abdome 2020: Fígado de morfologia habitual, com deposição acentuada e difusa de ferro no 
+parênquima, obtendo-se valores de R2* estimados em 1100 s-1 (normal < 120 s-1 para aparelhos de 3T) 
+pela relaxometria.
+RM coração (13/01/20): Avaliação do T2* do miocárdio estimado de 38,59ms, com concentração férrica do 
+miocárdio (MIC) estimada em 0,52 mg/g. (Valores abaixo de 20 ms são compatíveis com depósito de ferro 
+miocárdico. Valores abaixo de 10 ms são compatíveis com depósito de ferro miocárdico importante). 
+Impressão: VD com dimensões no limite superior da normalidade. Demais câmaras cardíacas com 
+dimensões preservadas. Função sistólica biventricular preservada. Ausência de sinais sugestivos de 
+depósito de ferro miocárdico.
+   
+- Osteometabólico:  
+DMO 2020: Considerando-se os valores de Z-score na coluna lombar (L1/L4) e femur (colo e total), de 
+acordo com o consenso abaixo, o diagnóstico densitométrico é: abaixo da faixa esperada para a idade. 
+ 
+# AP:  
+- Esquizofrenia (acompanha no IPQ) 
+- Esofagite Eosinofílica (acompanha na Imuno) 
+- Priapismo recorrente (acompanha na Uro/HC)   
+- Cistos velosos eruptivos (dx em 2015 na dermato-HC)  
+   
+# HF: Irmão faleceu aos 40 anos de IAM (FR: Obesidade)   
+ 
+# MUC: 
+-  HU (02 cps/dia)   
+- Ácido fólico 5mg
+- Deferasirox (01 cp/dia)   
+- Alfapoetina 10000 UI (seg, qua, sex) 
+- Omeprazol 2-0-2
+- Budesonida + diluída no mel de manhã e à noite
+  
+Pela PQ:  
+- Clozapina 100 mg 0-0-4  
+- Haloperidol 5mg 2-0-0 -> desde 24/10/22 + DECANOATO 3amp A CADA MÊS (Refere última aplicação 
+no dia 07/06/23)  
+- Biperideno 2mg 1-0-0  
+- Amtriptilina 25 mg 0-0-2 (para diminuição sialorréia)  
+- Ác. Valproico 0-0-1  
+ 
+# EVOLUÇÃO: Paciente retorna em consulta de seguimento (última consulta em out/24). Nega priaprismo 
+nesse período.  Em uso adequado da hidroxiureia (18,01mg/kg). Última hemotransfusão em 08/2023. 
+Refere por vezes quadro de astenia, palpitação e fraqueza. Eco 03/02/2025. 
+  
+# EF   
+AR- MV + em AHT, sem ruídos adventícios 
+ACV – RCR em 2 tempos, bulhas normofonéticas, sem sopros audíveis, taquicárdico
+ABDOME – Plano, flácido, indolor à palpação. Fígado não palpável. Paciente esplenectomizado
+
+ # Exames laboratoriais: 
+- 04/12/2024: Hb 7,4 / Ht 22,1 / VCM 74,7 / HCM 25,0 / Leuco 14,60 / Neut 6750 / Eosi 1190 / Baso 180 / 
+Linf 4820 / Mono 1660 / Plaq 327 mil / Cr 0,70 / Ur 14,0 / SatTransf 28 % / Ferro 94 / Ferro 333 / Ferritina 
+290,43 / Transf 28 / Transf 252 / CTLF 333 
+-  14/10/2024: Hb 7.2 | Hto 22.5 | Leuco 20220 (N: 43.7% | E: 8.1% | Bas: 0.8% | Linf: 35 | Mono: 12.4%) | 
+Plaq: 357.000 | Reticulocitos: 14.36% |  Cr: 0.68 | Ur: 18 | Na: 142 |  K: 3.7 | DHL: 582 |  BT 1.74 / BD: 0.6 / 
+BI:  1.1 | Sat Transf: 28% | Fe 88 | Ferritina: 278.19 |  CTLF: 310 | Transf: 238 | Ác. fólico: 20  | Vit. B12: 296   
+Urina: Cr: 0.4 | Microalbuminuria: < 0.5 | Proteinuria: <0.068 |   
+- 04/06/24: Hb 8,0 / Ht 24,4 / VCM 77,2 / HCM 32,8 / RDW 21,5 % / Leuco 15,62 / Neut 52,3% / Eosi 8,0% / 
+Eosi.Abso 1,25 / Baso 1,0% / Linf 27,0% / Linf.Abso 4,22 / Mono 11,7% / Plaq 333 mil / Ret.C 5,51 % / 
+Ret.Absoluto 173 mil / Cr 0,71 / Ur 17,0 / DHL 692 / BT 2,15 / BD 0,8 / BI 1,4 / VitB12 289 / AcFolico 14,6 / 
+SatTransf 23 % / Ferro 64 / Ferritina 541,51 / Transf 23 / CTLF 275   
+ 
+# Exames de Imagem: 
+- TC de Coluna Total 06/01/21: Corpos vertebrais alinhados. Heterogeneidade difusa do trabeculado ósseo, 
+relacionado à doença falciforme de base. Fraturas impactadas das porções centrais de praticamente todos 
+os platôs vertebrais torácicos e lombares, assim como de alguns platôs vertebrais cervicais. Não há 
+acometimento significativo do muro posterior ou sinais de instabilidade. Degeneração discal gasosa em T7-
+T8, T12-L1 e L2-L3. Leve abaulamento discal nos níveis L4-L5 e L5-S1, com insinuação às bases 
+foraminais. Canal vertebral central e demais forames de conjugação sem sinais de estenose significativa. 
+- EDA (22/10/21): Aspecto endoscópico sugestivo de esofagite eosinofílica. 
+Bx: Duodeno até 20 eos/CGA - Hp neg - esôfago 1 a 7 eos/CGA 
+- EDA (15/06/22): 1. Esofagite erosiva distal moderada (Los Angeles B)  
+CONDUTA:  2. Estrias longitudinais discretas em esôfago - biópsias com contagem de eosinófilos.   
+Bx: Esôfago distal - eosinófilos intraepiteliais: até 11 eosinófilos por campo de grande aumento;
+- Colono 30/11/21: sem alterações Bx: Pólipo hiperplásico em cólon ascendente  
+ 
+- EDA (30/09/2024): - Gastrite antral enantemática leve. H. pylori negativa.  
+
+A: # Impressão: Paciente com SB0 talassemia, em uso de HU, com priapismo recorrente. Apresenta ainda
+sobrecarga de ferro secundária, em uso de deferasirox. Em jul/2023, apresentou queda de Hb importante
+após trasnfusão de concentrado de hemácias, com diagnóstico de síndrome hiper-hemolítica (paciente com
+histórico prévio há 04 anos). Apresenta manutenção dos valores de hemoglobina com a alfapoetina.
+
+MEDICAÇÃO ATUAL
+
+• cetoprofeno 100 mg sol. injetável fr. amp., 100mg, Via Intra-Venosa
+• CHF, 1, Via Intra-Venosa, 1
+• dipirona, 1g, Via Intra-Venosa
+• dipirona, 1gr, Via Intra-Venosa
+• morfina, 2mg, Via Intra-Venosa
+• morfina, 3mg, Via Intra-Venosa
+• soro fisiológico 0,9%, 500mL, Via Intra-Venosa
+
+DIAGNÓSTICO
+
+DOENÇA FALCIFORME: 
+•  S-beta 0 talassemia   
+
+TRATAMENTO E CONDUTA
+
+• cetoprofeno 100 mg sol. injetável fr. amp., 100mg, Via Intra-Venosa
+• CHF, 1, Via Intra-Venosa, 1
+• dipirona, 1g, Via Intra-Venosa
+• dipirona, 1gr, Via Intra-Venosa
+• morfina, 2mg, Via Intra-Venosa
+• morfina, 3mg, Via Intra-Venosa
+• soro fisiológico 0,9%, 500mL, Via Intra-Venosa
+
+CONDUTA: # Conduta - conforme discutido com Dra. Liliana: 
+1.  Mantenho HU, Deferasirox e EPO. 
+2. Aguardo ECOTT para rastreio
+3. Retorno em 24/03/25 com  exames laboratoriais 
+4. Oriento quanto aos sinais de alarme e necessidade de procurar HD, se presentes 
+5. Paciente ciente e de acordo
+
+Breno Aires de Souza, R4 HH H9J.

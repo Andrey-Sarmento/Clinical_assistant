@@ -1,0 +1,113 @@
+
+Paciente 73038381814
+
+CABEÇALHO DA CONSULTA 
+
+# Ambulatório de Hemoglobinopatias # 
+  
+# ID:  33 anos  
+
+# Doença Falciforme: HbSC 
+- Data de nascimento 12/dezembro/1990
+- Idade de diagnóstico: 1 ano  
+- Início de acompanhamento no ambulatório de adultos - 06/novembro/2006 (encaminhada durante gestação)  
+- EFHb (18/abril/2016) HbS 51.4% HbC+A2 47.8% HbFetal 0.8%  
+  
+# Tratamento específico:  
+- Sangria terapêutica até out/2020 => Suspenso por dificuldade em vir ao hospital. 
+=> reintroduzido em nov/2022 (1 ST de 450ml) / dez/2022 (1 ST de 450ml)- suspenso em abril/2024 por anemia ( realiava em vila mariana)
+- Início HU 1000mg/dia 05/21 ? reduzido para 1cp/dia em 03/2022 por sintomas gástricos e tontura. 
+ 
+# MUC:  
+- Dipirona e Tramal s/n 
+- Ácido Fólico 5mg/dia
+
+Anteriores:
+- HU 1cp/dia (6,25 mg/kg/dia | P 81kg) --> suspenso em janeiro/24
+- AAS 100mg/dia --> sem uso 
+ 
+# Complicações relacionadas à doença:  
+- Esplenomegalia e alta necessidade transfusional  
+ > Esplenectomia (Hospital São Paulo/UNIFESP) – 1996  
+- Neovascularização em seg posterior de olhos D + E = panfotocoagulação jun/20  
+- Colecistectomia 19/09/2022 
+- Osteonecrose 
+ > Cintilografia óssea (22/março/2013): Múltiplas áreas focais de heterogeneidade do metabolismo ósseo em arcos costais, úmeros, rádios e fêmures, correspondendo a áreas de infarto ósseo em diferentes fases de remodelação óssea decorrentes da doença de base. 
+  
+# Rastreio:  
+- Proteinúria (nov/2006 - 0.41 g/L 0,53 g/vol) (set/2012 0.17 g/L 0.12 g/vol) (nov/2016 0.16 g/Ll 0.36 g/vol) (11/2016 Rel Prot/Creat 0,28 g/g) (17/08/18  proteinuria 24h 120mg)  --> 25/09/20 (p/c 0,11) -> 31/05/21 proteinuria 24h: 0,16g/vol (1500) -> (09/22): PTU24h 0,09g/24h (700ml) Cr24h 510mg/24h 72mg/dl (700ml) -> Pt24: 0,25g/24h (1000ml) 
+- ECO (18/maio/2010 - sem VRT) (24/novembro/2016 VRT 1.8 m/s) (21/setembro/2018 - sem VRT) / 27/08/20: FE 72%, sem anormalidades (não descreve PSAP por leve refluxo tricúspide e nem VRT); (18/04/22 externo): FE 66%, insuficiência mitral discreta, sem outras alterações. 
+(15/09/23 - externo): Sem VRT, Insuficência mitral discreta. FEVE 70%. Pressão pulonar estimada 23mmHg/ 08/23: ECOTT normal.
+- USG abdome (27/08/20): colecistopatia calculosa.  
+- FO (03/setembro/2007 - normal) (maio/2009 - normal) (setembro/2013 - normal) (janeiro/2014 - normal) (março/2017 - normal) (setembro/2018 - normal) / 25/11/19 - Normal / Retinopatia falcêmica (jun/2020) / 2021 ok / (/08/22) retinopatia – fez laserterapia em 19/07/23 em Hosp externo, mantendo acompanhamento no Hospital São Paulo (próxima consulta em setembro/23).
+ 
+# Consolidações das complicações anuais:  
+- Eventos vaso-oclusivos 2006-0;2007-0;2008-1;2009-0;2010-0;2011-0;2012-4;2013-2;2014-2;2015-2;2016-2; 2020-0; 2021-0; 2022-2 (Jun/2022); 2023 - 1 ( novembro)  
+- Internações 2006-1 (gestação);2007-2012-0;2013-1;2014-0;2015-2;2016-0 ; 2017-0; 2018 -0; 2019-0; 2020-0; 2021-0; 2022-1 
+** Internação por Pnm em 06/22 no Hosp Sepaco 
+- transfusões 2006-1; 2007-2012-0; 2013 (eritrociaferese durante pneumonia); 2014 -0; 2015 - 2 CH ; 2016-0;  2017-0; 2018 -0; 2019-0; 2020-0; 2021-0  
+ 
+# História Ginecológica / Obstétrica:  
+- G1C1 - 29/novembro/2006 (parto normal, termo, peso 2490g) 
+- Menarca: 13 anos  
+- Menstruação: fluxo menstrual normal (1 pacote), 4 dias, a cada 28 dias (DIU de cobre iniciado 2011 - última troca 2023) - piora da cólica mentrual após introdução do DIU 
+ 
+# AP:  
+- Episódio convulsivo isolado aos 4 anos de idade  
+- Dermatite atópica / Rinite alérgica  
+- Pneumonia grave (Março/2013)  
+  
+# Evolução:  
+Paciente retorna apos 2 meses, assintomática. Quanto á cefaleia, mantém em melhora,  está em uso de Topiramato e em seguimeto com  neurologista do convenio, realizou RM e AngioRM de crânio, com resultado de hipoplasia do seio transverso, podendo ser sugestivo de hipertensão intracraniana idiopática, refere estar fazendo seguimento ambulatorial. Nega crises álgicas, sangramentos ou outras queixas.
+  
+# Ao exame:  
+P89,7 kg| A 1,67 m | PA 132x 75 mmHg | FC 76 bpm
+BEG, corada, hidratada, ictérica 1+/4+, LOTE, Glasgow 15 
+ACV: RCR 2T BNF s/s  
+AR: MV+, ausência de RA, eupneica em aa . SaO2 98% 
+ABD: globoso, flácido indolor, sem visceromegalias, cicatriz previa de esplenectomia e de colecistectomia.  
+EXT: panturrilhas livres, perfusao preservada, ausência de edema, TEC 2s 
+  
+# Exames:  
+13/09/2024: Hb: 10,8 | Ht 33,5 | VCM 68,3 | RDW 18,2 | Leuco 10.370 | Neutro 5.911 | Eosi 871 | Baso 239 | Linfo 2.478 | Mono 871 | Plaq 685.000 | RetC 6,1 | RetTotal 299.390 | DHL 266 | AST 27 | ALT 12 | GGT 59 | FA 130 | Amilase 88 | BT 0,68 | BD 0,22 | BI 0,46 | Haptoglobina 75,9 | Transferrina 303 
+ 22/07/2024: Hb; 10,7, Leuco: 10500, N: 4900, plaqueta: 568,5, reticulócito: 129.
+ 22/04/24 Hb 8,8 Ht 32,7% VCM 66,5 HCM 18 Leuco 11920 Neu 5900Linf 5000 Plaq 649mil  
+15/04/24 Hb 8,9 Ht 28,9% cr 0,8222/01/24: Hb: 11,7 /Ht 37,3
+17/01/24: (externo): Hb: 10,3 /Ht:31,1 / VCM 64  /  Leuc: 11490 / N6572 /L2850 / PLT: 760 mil / Ret: 241 K/ DHL: 216 / Ferrit: 14,1 /Trsnf: 311/ Fe:31 / AF:6,1/Cr: 0,95 /TGO 35 /TGP15 / GGT: 70 / Fa: 122 / BT0,56 / BI 0,38 / 
+18/09/23: Hb: 11,2 / Ht: 33 / Leuco: 12,05 / Neut: 47,2% (5,7) / Eosi: 5,4% (0,7) / Baso: 3,6% / Linf: 35% (4,2) / Mono: 8,8% / Plaq: 572,3/ DHL 240/ Cr 0,8/ Ur 28/ K 4,6/ Na 138/ P 4,5/ C 1,6/ TGO 38/ TGP 24/ GGT 65/ FA 129/ BT 0,75/ BI 0,57/ Alb 3,4/
+- 24/07/23: Hb: 12,1 / Ht: 34,4 / Leuco: 10,38 / Neut: 46% / Eosi: 10,2% / Baso: 2,6% / Linf: 29,4% / Mono: 11,8% / Plaq: 582
+- 09/01/23: Hb: 11,9 / Ht: 36,2 / Leuco: 8,97 / Neut: 42,3% / Eosi: 10,5% / Baso: 2,4% / Linf: 35% / Mono: 9,8% / Plaq: 670 / Ret 261k 
+- 29/12/22 (EXTERNO): Hb 12 VCM 86 Leuco 10130 - neut 5298 lyn 2806 Pqt 760k Ret 363k Ferritina 147 IST 24% CTLFE 236 Fe 74 AF 6,70 Ur 16 Cr 0,86 TGO 42 TGP 16 GGT 57 FA 110 BT 0,95 - BD 0,37 BI 0,58 Alb 4,2 TTPa 0,92 RNI 1  
+ 
+AngioRM 09/04/24: Hipoplasia do seio transverso, sigmoide e bulbo jugular à direita, notando-se uma redução mais acentuada do calibre do segmento distal e do seio transverso. Este achado é constitucional e sua valorização deve ser criteriosa uma vez que pode ser observado em individuos assintomaticos, mas também eventualmente pode ser relacionado à hipertensão intracraniana idiopatica.  
+  
+RM crânio 09/04/24: exame sem evidencias de anormlaidades detectaveis pelo metodo, nas condições técnicas descritas.  
+  
+USG doppler bilateral 03/04/24: sem evidencia de trombose  
+
+# Impressão: Hemoglobinopatia SC, atualmente, em programa de sangria terapêutica para redução de viscosidade sanguínea. Suspenso HU por ausência de adesao e resposta adequada. Em acompanhamento para Retinopatia proliferativa em Hospital São Paulo. Plaquetose pós esplenectomia. Sem indicação de investigação de DvW no momento.  
+
+ # Conduta discutida com Dr. José Vanildo 
+- Retorno em 16/12, realizar sangria (400 ml) de 6/6 semanas até próxima consulta.
+- Solicito EcoTT de rastreio 
+- Solicito exames laboratoriais com proteinúria de 24h 
+- Aguardo FO - paciente em acompanhamento com oftalmologista externo
+- Mantenho Ac fólico e analgesia com dipirona e tramadol s/n 
+- Oriento manter seguimento com neurologista externo 
+
+MEDICAÇÃO ATUAL
+
+• CHFI, 2, Via Intra-Venosa
+• sangria terapêutica, 600ml, Via Intra-Venosa
+• soro fisiológico 0,9%, 500ml, Via Intra-Venosa
+
+DIAGNÓSTICO
+
+DOENÇA FALCIFORME: 
+•  Hemoglobinopatia SC
+
+TRATAMENTO E CONDUTA
+
+• CHFI, 2, Via Intra-Venosa
+• sangria terapêutica, 600ml, Via Intra-Venosa
+• soro fisiológico 0,9%, 500ml, Via Intra-Venosa
