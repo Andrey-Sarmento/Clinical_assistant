@@ -21,7 +21,7 @@ desempregado.
 > Rastreio de complicações:
 - Oftalmopatia:
 FO (04/09/19): Normal   
-FO (27/06/22): Aumento da tortuosidade vascular, sem sinais de hemorragia ou neovascularização da retina.   
+FO (27/06/22): Aumento da tortuosidade vascular, sem sinais de hemorragia ou neovascularização da retina.  
 Aguarda novo F.O.
 FO em 22/04/2024: Sem alterações   
 Realizou FO em 22/04/2024: Sem alterações   
@@ -141,7 +141,7 @@ MEDICAÇÃO ATUAL
 DIAGNÓSTICO
 
 DOENÇA FALCIFORME: 
-•  S-beta 0 talassemia   
+•  S-beta 0 talassemia
 
 TRATAMENTO E CONDUTA
 
@@ -159,5 +159,3 @@ CONDUTA: # Conduta - conforme discutido com Dra. Liliana:
 3. Retorno em 24/03/25 com  exames laboratoriais 
 4. Oriento quanto aos sinais de alarme e necessidade de procurar HD, se presentes 
 5. Paciente ciente e de acordo
-
-Breno Aires de Souza, R4 HH H9J.

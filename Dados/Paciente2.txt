@@ -9,7 +9,7 @@ Id: 30 anos, natural e procedente de São Paulo; solteira; sem filhos; não trab
                  
 # HD:                              
 1 - Anemia falciforme HbSS (Diagnóstico aos 2 meses)            
-2 - AVCi prévio (2007) com 16 anos - sem sequelas            
+2 - AVCi prévio (2007) com 16 anos - sem sequelas  
 3 - Necrose de cabeça de fêmur direito (2008) com artrose secundária / Sem cirurgia prévia / Segue na ortopedia HC: indicação de procedimento cirúrgico (aguardando fila)            
 4 - Colecistectomia 2008            
 5 - Sobrecarga férrica transfusional            
@@ -24,7 +24,7 @@ Id: 30 anos, natural e procedente de São Paulo; solteira; sem filhos; não trab
 - Segue em programa transfusional: sangria 500 ml + 2 CHFF a cada 4 semanas em redução de HbS para <50%            
     
          
-- 20/01/23: HbS Pré 50,7% / Pós 31,7%            
+- 20/01/23: HbS Pré 50,7% / Pós 31,7%          
 - 03/03/23: Pré 59,8% / Pós 39,7%            
 - 31/03/23: Pré 54,5% / Pós 35,6%            
 - 27/04/23: Pré 42% / Pós 25,7%            
