@@ -6,7 +6,35 @@ st.set_page_config(page_title="Assistente de Diagnóstico", layout="wide")
 
 # Título e descrição
 st.title("Assistente de Diagnóstico")
-st.caption("Envie um prontuário no formato .txt ou cole o texto abaixo para avaliação.")
+
+st.markdown(
+    """
+    <h3 style='text-align: justify;'>
+    O assistente analisa seu prontuário e responde a <b>8 perguntas específicas</b>:
+    </h3>
+    <ol style='font-size:16px; text-align: justify;'>
+      <li>O paciente tem doença falciforme?</li>
+      <li>O paciente teve internações hospitalares?</li>
+      <li>O paciente foi submetido a algum procedimento cirúrgico?</li>
+      <li>O paciente recebeu transplante de medula óssea?</li>
+      <li>O paciente tomou/usou quelantes de ferro?</li>
+      <li>O paciente realizou urinálise com albumina medida?</li>
+      <li>O paciente está em terapia transfusional crônica?</li>
+      <li>O paciente teve acidente vascular cerebral (infarto)?</li>
+    </ol>
+    <p style='font-size:16px;'>
+    As respostas possíveis são <b>Sim</b>, <b>Não</b> e <b>Sem informação</b>:
+    </p>
+    <ul style='font-size:16px; text-align: justify;'>
+      <li><b>Sim</b> ou <b>Não</b> aparecem apenas quando há evidência explícita positiva ou negativa no texto.</li>
+      <li><b>Sem informação</b> significa que não foi encontrada nenhuma menção positiva ou negativa relacionada à pergunta.</li>
+    </ul>
+    <p style='font-size:16px;'>
+    Envie um arquivo <code>.txt</code> ou cole o texto abaixo e clique em <b>Avaliar</b>.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
 
 # Aviso em destaque
 st.warning("⚠️ Este é um protótipo em fase experimental. Os resultados podem conter erros e não devem substituir avaliação médica especializada.")
