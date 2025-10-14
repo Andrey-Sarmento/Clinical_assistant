@@ -67,7 +67,6 @@ perguntas = [
 
 
 def avaliar_prontuario(pront_teste, delta=30):
-
     map_pred = {0: "Sim", 1: "Não", 2: "Sem informação"}
 
     # Prepara entrada
@@ -110,53 +109,77 @@ def avaliar_prontuario(pront_teste, delta=30):
     return pd.DataFrame(linhas, columns=["pergunta", "pred", "prob", "evidencia"]), scores, wei
 
 
-
 # --------------------------------------------------------------------------------------------
 # Função para destacar evidências no prontuário
 # --------------------------------------------------------------------------------------------
 
 def highlight_evidence(prontuario, df):
-    cores = [
-        "#d62728", "#2ca02c", "#1f77b4", "#ff7f0e",
-        "#9467bd", "#8c564b", "#e377c2", "#6b535b"
-    ]
+    # paleta neutra estável por índice da pergunta
+    palette = ["#1f77b4", "#2ca02c", "#9467bd", "#ff7f0e",
+               "#7f7f7f", "#17becf", "#8c564b", "#bcbd22"]
+    color_by_q = {perg: palette[i % len(palette)] for i, perg in enumerate(perguntas)}
 
-    texto_destacado = prontuario
-    legendas = []
+    spans = []
+    legend = []
 
-    for i, row in df.iterrows():
-        if row["pred"] in ["Sim", "Não"]:
-            evid = str(row["evidencia"]).strip()
-            if evid:
-                cor = cores[i % len(cores)]
+    N = len(prontuario)
 
-                # normaliza só para busca
-                evid_norm = re.sub(r'\s+', ' ', evid)
-                pront_norm = re.sub(r'\s+', ' ', prontuario)
+    for perg in perguntas:  # mantém ordem fixa
+        row = df.loc[df["pergunta"] == perg]
+        if row.empty:
+            continue
+        row = row.iloc[0]
+        if row["pred"] not in ("Sim", "Não"):
+            continue
 
-                m = re.search(re.escape(evid_norm), pront_norm)
-                if m:
-                    # recupera trecho original respeitando quebras
-                    start = m.start()
-                    end = m.end()
-                    trecho_original = prontuario[start:end]
+        evid = str(row["evidencia"]).strip()
+        if not evid:
+            continue
 
-                    span = (
-                        f'<span style="border: 2px solid {cor}; '
-                        f'padding:2px 4px; border-radius:4px;">{trecho_original}</span>'
-                    )
-                    texto_destacado = texto_destacado.replace(trecho_original, span, 1)
+        # regex tolerante a quebras e múltiplos espaços
+        patt = re.escape(evid).replace(r"\ ", r"\s+")
+        regex = re.compile(patt, flags=re.IGNORECASE | re.UNICODE | re.DOTALL)
 
-                    legendas.append(
-                        f'<span style="border: 2px solid {cor}; '
-                        f'padding:0px 8px; border-radius:3px;"></span> {row["pergunta"]}'
-                    )
+        matches = list(regex.finditer(prontuario))
+        if not matches:
+            continue
 
-    legenda_html = "<br>".join(legendas)
-    return (
-        f"<div>{legenda_html}</div><br>"
-        f"<div style='white-space: pre-wrap; text-align: justify;'>{texto_destacado}</div>"
-    )
+        color = color_by_q[perg]
+        for m in matches:
+            spans.append({"start": m.start(), "end": m.end(),
+                          "pergunta": perg, "color": color})
+
+        legend.append(
+            f'<span style="border:2px solid {color}; padding:0 8px; border-radius:3px;"></span> {perg}'
+        )
+
+    # ordenar spans por posição
+    spans.sort(key=lambda x: (x["start"], x["end"]))
+
+    # evitar sobreposição (descarta o segundo se cruzar)
+    merged = []
+    last_end = -1
+    for sp in spans:
+        s, e = sp["start"], sp["end"]
+        if s < last_end:
+            continue
+        merged.append(sp)
+        last_end = e
+
+    # reconstruir com destaques
+    out, cur = [], 0
+    for sp in merged:
+        out.append(prontuario[cur:sp["start"]])
+        chunk = prontuario[sp["start"]:sp["end"]]
+        out.append(
+            f'<span style="border:2px solid {sp["color"]}; padding:2px 4px; border-radius:4px;">{chunk}</span>'
+        )
+        cur = sp["end"]
+    out.append(prontuario[cur:])
+
+    legend_html = "<br>".join(legend)
+    body_html = "".join(out)
+    return f"<div>{legend_html}</div><br><div style='white-space: pre-wrap; text-align: justify;'>{body_html}</div>"
 
 
 # --------------------------------------------------------------------------------------------
