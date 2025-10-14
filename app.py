@@ -1,37 +1,60 @@
 # app.py
 import streamlit as st
+import streamlit.components.v1 as components
 from Python.Predict import avaliar_prontuario, highlight_evidence, build_offset_map, normalizar_prontuario
 
-st.set_page_config(page_title="Assistente de Diagnóstico", layout="wide")
+st.set_page_config(page_title="Análise de Prontuário Médico", layout="wide")
+
+# Forçar fundo claro para toda a página
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #1e1e1e;  /* dark suavizado */
+        color: #e0e0e0;             /* texto cinza-claro para contraste */
+        font-family: Arial, sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Título e descrição
-st.title("Assistente de Diagnóstico")
+st.title("Análise de Prontuário Médico")
 
 st.markdown(
     """
-    <h3 style='text-align: justify;'>
-    O assistente analisa seu prontuário e responde a <b>8 perguntas específicas</b>:
-    </h3>
-    <ol style='font-size:16px; text-align: justify;'>
-      <li>O paciente tem doença falciforme?</li>
-      <li>O paciente teve internações hospitalares?</li>
-      <li>O paciente foi submetido a algum procedimento cirúrgico?</li>
-      <li>O paciente recebeu transplante de medula óssea?</li>
-      <li>O paciente tomou/usou quelantes de ferro?</li>
-      <li>O paciente realizou urinálise com albumina medida?</li>
-      <li>O paciente está em terapia transfusional crônica?</li>
-      <li>O paciente teve acidente vascular cerebral (infarto)?</li>
-    </ol>
-    <p style='font-size:16px;'>
-    As respostas possíveis são <b>Sim</b>, <b>Não</b> e <b>Sem informação</b>:
-    </p>
-    <ul style='font-size:16px; text-align: justify;'>
-      <li><b>Sim</b> ou <b>Não</b> aparecem apenas quando há evidência explícita positiva ou negativa no texto.</li>
-      <li><b>Sem informação</b> significa que não foi encontrada nenhuma menção positiva ou negativa relacionada à pergunta.</li>
-    </ul>
-    <p style='font-size:16px;'>
-    Envie um arquivo <code>.txt</code> ou cole o texto abaixo e clique em <b>Avaliar</b>.
-    </p>
+    <div style="
+        border: 1px solid #444;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #2a2a2a;
+    ">
+        <h3 style='text-align: justify;'>
+        O assistente analisa seu prontuário e responde a <b>8 perguntas específicas</b>:
+        </h3>
+        <ol style='font-size:16px; text-align: justify;'>
+          <li>O paciente tem doença falciforme?</li>
+          <li>O paciente teve internações hospitalares?</li>
+          <li>O paciente foi submetido a algum procedimento cirúrgico?</li>
+          <li>O paciente recebeu transplante de medula óssea?</li>
+          <li>O paciente tomou/usou quelantes de ferro?</li>
+          <li>O paciente realizou urinálise com albumina medida?</li>
+          <li>O paciente está em terapia transfusional crônica?</li>
+          <li>O paciente teve acidente vascular cerebral (infarto)?</li>
+        </ol>
+        <p style='font-size:16px;'>
+        As respostas possíveis são <b>Sim</b>, <b>Não</b> e <b>Sem informação</b>:
+        </p>
+        <ul style='font-size:16px; text-align: justify;'>
+          <li><b>Sim</b> ou <b>Não</b> aparecem apenas quando há evidência explícita positiva ou negativa no texto.</li>
+          <li><b>Sem informação</b> significa que não foi encontrada nenhuma menção positiva ou negativa relacionada à pergunta.</li>
+        </ul>
+        <p style='font-size:16px;'>
+        Envie um arquivo <code>.txt</code> ou cole o texto abaixo e clique em <b>Avaliar</b>.
+        </p>
+    </div>
     """,
     unsafe_allow_html=True
 )
@@ -120,10 +143,41 @@ if run:
 
         # destacar evidências no texto
         st.subheader("Prontuário com Evidências Destacadas")
+
         texto_norm = normalizar_prontuario(texto, unicode=False)
         mapa = build_offset_map(texto, texto_norm)
         html_destacado = highlight_evidence(texto, df0, mapa)
-        st.markdown(html_destacado, unsafe_allow_html=True)
+
+        # 1. Mostrar a legenda (perguntas + quadradinhos coloridos) em Markdown
+        st.markdown(html_destacado.split("</div><br>", 1)[0], unsafe_allow_html=True)
+
+        # 2. Mostrar o texto do prontuário destacado em uma caixa branca centralizada
+        prontuario_html = html_destacado.split("</div><br>", 1)[1]
+
+        container_html = f"""
+        <div style="
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;">
+        <div style="
+            background-color: #444444;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+            width: 90%;
+            max-width: 1000px;
+            text-align: justify;
+            line-height: 1.5;
+            overflow-y: auto;
+            height: 600px;">
+            {prontuario_html}
+        </div>
+        </div>
+        """
+
+        components.html(container_html, height=650, scrolling=False)
 
         # botão de download
         csv = df.to_csv(index=True)

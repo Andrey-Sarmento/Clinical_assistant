@@ -147,8 +147,8 @@ def highlight_evidence(prontuario, df, mapa):
 
         spans.append((start_orig, end_orig, color_by_q[row["pergunta"]], row["pergunta"]))
         legendas.append(
-            f'<span style="border: 2px solid {color_by_q[row["pergunta"]]}; '
-            f'padding:0px 8px; border-radius:3px;"></span> {row["pergunta"]}'
+            f'<span style="display:inline-block; width:14px; height:14px; '
+            f'background-color:{color_by_q[row["pergunta"]]}; border-radius:3px; margin-right:6px;"></span>{row["pergunta"]}'
         )
 
     spans.sort(key=lambda x: x[0])
