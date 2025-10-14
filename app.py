@@ -5,6 +5,27 @@ from Python.Predict import avaliar_prontuario, highlight_evidence, build_offset_
 
 st.set_page_config(page_title="Análise de Prontuário Médico", layout="wide")
 
+# Estilos customizados do botão
+st.markdown(
+    """
+    <style>
+    div.stButton > button:first-child {
+        background-color: #3a6ea5;
+        color: white;
+        border: none;
+        padding: 0.6em 1.2em;
+        border-radius: 6px;
+        font-weight: 500;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #345e8c;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Forçar fundo claro para toda a página
 st.markdown(
     """
@@ -31,9 +52,9 @@ st.markdown(
         margin-bottom: 20px;
         background-color: #2a2a2a;
     ">
-        <h3 style='text-align: justify;'>
+        <p style='font-size:16px; text-align: justify;'>
         O assistente analisa seu prontuário e responde a <b>8 perguntas específicas</b>:
-        </h3>
+        </p>
         <ol style='font-size:16px; text-align: justify;'>
           <li>O paciente tem doença falciforme?</li>
           <li>O paciente teve internações hospitalares?</li>
@@ -88,7 +109,7 @@ with col2:
     clear = st.button("Limpar", use_container_width=True)
 
 if clear:
-    st.experimental_rerun()
+    st.rerun()
 
 # Execução
 if run:
