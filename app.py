@@ -1,6 +1,6 @@
 # app.py
 import streamlit as st
-from Python.Predict import avaliar_prontuario
+from Python.Predict import avaliar_prontuario, highlight_evidence
 
 st.set_page_config(page_title="Assistente de Diagnóstico", layout="wide")
 
@@ -43,6 +43,9 @@ if run:
         with st.spinner("Processando..."):
             df, scores, wei = avaliar_prontuario(texto, delta=delta)
 
+        # salva cópia ANTES do rename (com nomes originais)
+        df0 = df.copy()
+
         # ajustar índice para começar em 1
         df.index = range(1, len(df) + 1)
         df = df.rename(columns={
@@ -80,6 +83,10 @@ if run:
 
         st.markdown(html_table, unsafe_allow_html=True)
 
+        # destacar evidências no texto
+        st.subheader("Prontuário com Evidências Destacadas")
+        html_destacado = highlight_evidence(texto, df0)
+        st.markdown(html_destacado, unsafe_allow_html=True)
 
         # botão de download
         csv = df.to_csv(index=True)

@@ -54,9 +54,7 @@ _ = model.eval()
 # Função principal
 # --------------------------------------------------------------------------------------------
 
-def avaliar_prontuario(pront_teste, delta=30):
-
-    perguntas = [
+perguntas = [
         "O paciente tem doença falciforme?",
         "O paciente teve internações hospitalares?",
         "O paciente foi submetido a algum procedimento cirúrgico?",
@@ -66,6 +64,9 @@ def avaliar_prontuario(pront_teste, delta=30):
         "O paciente está em terapia transfusional crônica?",
         "O paciente teve acidente vascular cerebral (infarto)?"
     ]
+
+
+def avaliar_prontuario(pront_teste, delta=30):
 
     map_pred = {0: "Sim", 1: "Não", 2: "Sem informação"}
 
@@ -107,6 +108,55 @@ def avaliar_prontuario(pront_teste, delta=30):
         print(f"{p.ljust(col1_w)}  |  {pred.ljust(col2_w)}  |  {prob:.3f} |  {frase}")
 
     return pd.DataFrame(linhas, columns=["pergunta", "pred", "prob", "evidencia"]), scores, wei
+
+
+
+# --------------------------------------------------------------------------------------------
+# Função para destacar evidências no prontuário
+# --------------------------------------------------------------------------------------------
+
+def highlight_evidence(prontuario, df):
+    cores = [
+        "#d62728", "#2ca02c", "#1f77b4", "#ff7f0e",
+        "#9467bd", "#8c564b", "#e377c2", "#6b535b"
+    ]
+
+    texto_destacado = prontuario
+    legendas = []
+
+    for i, row in df.iterrows():
+        if row["pred"] in ["Sim", "Não"]:
+            evid = str(row["evidencia"]).strip()
+            if evid:
+                cor = cores[i % len(cores)]
+
+                # normaliza só para busca
+                evid_norm = re.sub(r'\s+', ' ', evid)
+                pront_norm = re.sub(r'\s+', ' ', prontuario)
+
+                m = re.search(re.escape(evid_norm), pront_norm)
+                if m:
+                    # recupera trecho original respeitando quebras
+                    start = m.start()
+                    end = m.end()
+                    trecho_original = prontuario[start:end]
+
+                    span = (
+                        f'<span style="border: 2px solid {cor}; '
+                        f'padding:2px 4px; border-radius:4px;">{trecho_original}</span>'
+                    )
+                    texto_destacado = texto_destacado.replace(trecho_original, span, 1)
+
+                    legendas.append(
+                        f'<span style="border: 2px solid {cor}; '
+                        f'padding:0px 8px; border-radius:3px;"></span> {row["pergunta"]}'
+                    )
+
+    legenda_html = "<br>".join(legendas)
+    return (
+        f"<div>{legenda_html}</div><br>"
+        f"<div style='white-space: pre-wrap; text-align: justify;'>{texto_destacado}</div>"
+    )
 
 
 # --------------------------------------------------------------------------------------------
