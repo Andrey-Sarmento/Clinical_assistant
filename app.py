@@ -1,11 +1,15 @@
 # app.py
 import streamlit as st
-from Python.Predict import avaliar_prontuario, highlight_evidence
+from Python.Predict import avaliar_prontuario, highlight_evidence, build_offset_map, normalizar_prontuario
 
 st.set_page_config(page_title="Assistente de Diagnóstico", layout="wide")
 
+# Título e descrição
 st.title("Assistente de Diagnóstico")
 st.caption("Envie um prontuário no formato .txt ou cole o texto abaixo para avaliação.")
+
+# Aviso em destaque
+st.warning("⚠️ Este é um protótipo em fase experimental. Os resultados podem conter erros e não devem substituir avaliação médica especializada.")
 
 # Sidebar
 with st.sidebar:
@@ -46,6 +50,9 @@ if run:
         # salva cópia ANTES do rename (com nomes originais)
         df0 = df.copy()
 
+        # remove colunas técnicas do dataframe que vai para a tabela e para o CSV
+        df = df.drop(columns=["start_norm", "end_norm"], errors="ignore")
+
         # ajustar índice para começar em 1
         df.index = range(1, len(df) + 1)
         df = df.rename(columns={
@@ -85,7 +92,9 @@ if run:
 
         # destacar evidências no texto
         st.subheader("Prontuário com Evidências Destacadas")
-        html_destacado = highlight_evidence(texto, df0)
+        texto_norm = normalizar_prontuario(texto, unicode=False)
+        mapa = build_offset_map(texto, texto_norm)
+        html_destacado = highlight_evidence(texto, df0, mapa)
         st.markdown(html_destacado, unsafe_allow_html=True)
 
         # botão de download

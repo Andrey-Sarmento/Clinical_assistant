@@ -93,93 +93,78 @@ def avaliar_prontuario(pront_teste, delta=30):
         J = 8    # stride acumulado
         start = max(0, j * J - delta)
         end   = min(2**13, j * J + R + delta)
-        frase = normalizar_prontuario(pront_teste, unicode=False)[start:end]
-        frase = frase.strip()
+
+        # trecho normalizado apenas para tabela
+        frase_norm = normalizar_prontuario(pront_teste, unicode=False)[start:end].strip()
         
-        linhas.append([pergunta, map_pred[pred_idx], prob_pred, frase])
+        linhas.append([pergunta, map_pred[pred_idx], prob_pred, frase_norm, start, end])
 
-    # formata como tabela bonita
-    col1_w = max(len(l[0]) for l in linhas)
-    col2_w = max(len(l[1]) for l in linhas)
-    print(f"{'Pergunta'.ljust(col1_w)}  |  {'Pred'.ljust(col2_w)}  |  Prob  |  Evidência")
-    print("-" * (col1_w + col2_w + 100))
-    for p, pred, prob, frase in linhas:
-        print(f"{p.ljust(col1_w)}  |  {pred.ljust(col2_w)}  |  {prob:.3f} |  {frase}")
+    df = pd.DataFrame(
+        linhas,
+        columns=["pergunta", "pred", "prob", "evidencia", "start_norm", "end_norm"]
+    )
 
-    return pd.DataFrame(linhas, columns=["pergunta", "pred", "prob", "evidencia"]), scores, wei
+    return df, scores, wei
 
 
 # --------------------------------------------------------------------------------------------
 # Função para destacar evidências no prontuário
 # --------------------------------------------------------------------------------------------
 
-def highlight_evidence(prontuario, df):
-    # paleta neutra estável por índice da pergunta
-    palette = ["#1f77b4", "#2ca02c", "#9467bd", "#ff7f0e",
-               "#7f7f7f", "#17becf", "#8c564b", "#bcbd22"]
-    color_by_q = {perg: palette[i % len(palette)] for i, perg in enumerate(perguntas)}
+def build_offset_map(original, normalized):
+    mapa = []
+    i_norm = 0
+    for i_orig, c in enumerate(original):
+        c_norm = unicodedata.normalize('NFKD', c).encode("ASCII", "ignore").decode("utf-8")
+        if not c_norm:
+            continue
+        for _ in c_norm:
+            if i_norm < len(normalized):
+                mapa.append(i_orig)
+                i_norm += 1
+    return mapa
+
+
+def highlight_evidence(prontuario, df, mapa):
+    cores = [
+        "#1f77b4", "#2ca02c", "#9467bd", "#ff7f0e",
+        "#7f7f7f", "#17becf", "#8c564b", "#bcbd22"
+    ]
+    color_by_q = {perg: cores[i % len(cores)] for i, perg in enumerate(perguntas)}
 
     spans = []
-    legend = []
+    legendas = []
 
-    N = len(prontuario)
-
-    for perg in perguntas:  # mantém ordem fixa
-        row = df.loc[df["pergunta"] == perg]
-        if row.empty:
+    for _, row in df.iterrows():
+        if row["pred"] not in ["Sim", "Não"]:
             continue
-        row = row.iloc[0]
-        if row["pred"] not in ("Sim", "Não"):
+        start_norm, end_norm = row["start_norm"], row["end_norm"]
+        if pd.isna(start_norm) or pd.isna(end_norm):
             continue
 
-        evid = str(row["evidencia"]).strip()
-        if not evid:
-            continue
+        start_orig = mapa[start_norm]
+        end_orig   = mapa[min(end_norm, len(mapa)-1)]
 
-        # regex tolerante a quebras e múltiplos espaços
-        patt = re.escape(evid).replace(r"\ ", r"\s+")
-        regex = re.compile(patt, flags=re.IGNORECASE | re.UNICODE | re.DOTALL)
-
-        matches = list(regex.finditer(prontuario))
-        if not matches:
-            continue
-
-        color = color_by_q[perg]
-        for m in matches:
-            spans.append({"start": m.start(), "end": m.end(),
-                          "pergunta": perg, "color": color})
-
-        legend.append(
-            f'<span style="border:2px solid {color}; padding:0 8px; border-radius:3px;"></span> {perg}'
+        spans.append((start_orig, end_orig, color_by_q[row["pergunta"]], row["pergunta"]))
+        legendas.append(
+            f'<span style="border: 2px solid {color_by_q[row["pergunta"]]}; '
+            f'padding:0px 8px; border-radius:3px;"></span> {row["pergunta"]}'
         )
 
-    # ordenar spans por posição
-    spans.sort(key=lambda x: (x["start"], x["end"]))
-
-    # evitar sobreposição (descarta o segundo se cruzar)
-    merged = []
-    last_end = -1
-    for sp in spans:
-        s, e = sp["start"], sp["end"]
-        if s < last_end:
-            continue
-        merged.append(sp)
-        last_end = e
-
-    # reconstruir com destaques
-    out, cur = [], 0
-    for sp in merged:
-        out.append(prontuario[cur:sp["start"]])
-        chunk = prontuario[sp["start"]:sp["end"]]
-        out.append(
-            f'<span style="border:2px solid {sp["color"]}; padding:2px 4px; border-radius:4px;">{chunk}</span>'
+    spans.sort(key=lambda x: x[0])
+    saida, pos = [], 0
+    for ini, fim, cor, _ in spans:
+        if ini > pos:
+            saida.append(prontuario[pos:ini])
+        saida.append(
+            f'<span style="border:2px solid {cor}; padding:2px 4px; border-radius:4px;">'
+            f'{prontuario[ini:fim]}</span>'
         )
-        cur = sp["end"]
-    out.append(prontuario[cur:])
+        pos = fim
+    saida.append(prontuario[pos:])
 
-    legend_html = "<br>".join(legend)
-    body_html = "".join(out)
-    return f"<div>{legend_html}</div><br><div style='white-space: pre-wrap; text-align: justify;'>{body_html}</div>"
+    legenda_html = "<br>".join(legendas)
+    return f"<div>{legenda_html}</div><br><div style='white-space: pre-wrap; text-align: justify;'>{''.join(saida)}</div>"
 
 
 # --------------------------------------------------------------------------------------------
