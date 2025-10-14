@@ -54,7 +54,7 @@ _ = model.eval()
 # Função principal
 # --------------------------------------------------------------------------------------------
 
-def avaliar_prontuario(pront_teste, delta=10):
+def avaliar_prontuario(pront_teste, delta=30):
 
     perguntas = [
         "O paciente tem doença falciforme?",
