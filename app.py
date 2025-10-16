@@ -1,7 +1,7 @@
 # app.py
 import streamlit as st
 import streamlit.components.v1 as components
-from Python.Predict import avaliar_prontuario, highlight_evidence, build_offset_map, normalizar_prontuario
+from Python.Predict import highlight_evidence, build_offset_map, normalizar_prontuario, evaluate_record
 
 st.set_page_config(page_title="Análise de Prontuário Médico", layout="wide")
 
@@ -85,7 +85,7 @@ st.warning("⚠️ Este é um protótipo em fase experimental. Os resultados pod
 
 # Sidebar
 with st.sidebar:
-    delta = st.number_input("delta", min_value=0, max_value=200, value=30, step=1)
+    delta = st.number_input("delta", min_value=0, max_value=200, value=20, step=1)
     st.markdown("---")
     st.caption("Use UTF-8 nos arquivos .txt.")
 
@@ -104,108 +104,119 @@ with tab2:
 # Botões
 col1, col2 = st.columns([1, 1])
 with col1:
-    run = st.button("Avaliar", type="primary", use_container_width=True)
-with col2:
-    clear = st.button("Limpar", use_container_width=True)
+    if st.button("Avaliar", type="primary", use_container_width=True):
+        if not texto.strip():
+            st.error("Forneça um texto.")
+        else:
+            with st.spinner("Processando..."):
+                df, scores, wei, _ = evaluate_record(texto, delta=delta)
 
-if clear:
-    st.rerun()
+            st.session_state["df0"] = df.copy()
+            st.session_state["df"] = df
+            st.session_state["texto"] = texto
+
+with col2:
+    if st.button("Limpar", use_container_width=True):
+        st.session_state.clear()
+        st.rerun()
+
 
 # Execução
-if run:
-    if not texto.strip():
-        st.error("Forneça um texto.")
-    else:
-        with st.spinner("Processando..."):
-            df, scores, wei = avaliar_prontuario(texto, delta=delta)
+if "df0" in st.session_state:
+    df0 = st.session_state["df0"]
+    df = st.session_state["df"]
+    texto = st.session_state["texto"]
 
-        # salva cópia ANTES do rename (com nomes originais)
-        df0 = df.copy()
+    # remove colunas técnicas do dataframe que vai para a tabela e para o CSV
+    df = df.drop(columns=["start_norm", "end_norm"], errors="ignore")
 
-        # remove colunas técnicas do dataframe que vai para a tabela e para o CSV
-        df = df.drop(columns=["start_norm", "end_norm"], errors="ignore")
+    # ajustar índice para começar em 1
+    df.index = range(1, len(df) + 1)
+    df = df.rename(columns={
+        "pergunta": "Pergunta",
+        "pred": "Predição",
+        "prob": "Probabilidade",
+        "evidencia": "Evidência no Prontuário"
+    })
+    df["Probabilidade"] = df["Probabilidade"].map(lambda x: f"{x:.3f}")
 
-        # ajustar índice para começar em 1
-        df.index = range(1, len(df) + 1)
-        df = df.rename(columns={
-            "pergunta": "Pergunta",
-            "pred": "Predição",
-            "prob": "Probabilidade",
-            "evidencia": "Evidência no Prontuário"
-        })
-        df["Probabilidade"] = df["Probabilidade"].map(lambda x: f"{x:.3f}")
+    st.subheader("Resultado")
+    # aplicar estilos por coluna
+    def estilo(val, col):
+        if col == "Predição" or col == "Probabilidade":
+            return 'text-align: center; padding: 6px;'
+        elif col == "Evidência no Prontuário":
+            return 'text-align: justify; padding: 6px; max-width: 500px; white-space: normal; word-wrap: break-word;'
+        else:  # Pergunta
+            return 'text-align: left; padding: 6px;'
 
-        st.subheader("Resultado")
-        # aplicar estilos por coluna
-        def estilo(val, col):
-            if col == "Predição" or col == "Probabilidade":
-                return 'text-align: center; padding: 6px;'
-            elif col == "Evidência no Prontuário":
-                return 'text-align: justify; padding: 6px; max-width: 500px; white-space: normal; word-wrap: break-word;'
-            else:  # Pergunta
-                return 'text-align: left; padding: 6px;'
+    styled = df.style.set_table_styles(
+        [
+            {"selector": "th", "props": [("text-align", "center"), ("padding", "8px")]},
+            {"selector": "td", "props": [("padding", "8px")]},
+            {"selector": "td.col0", "props": [("min-width", "340px")]},  # Pergunta
+            {"selector": "td.col1", "props": [("min-width", "140px")]},  # Predição
+            {"selector": "td.col2", "props": [("min-width", "140px")]},  # Probabilidade
+            {"selector": "td.col3", "props": [("min-width", "640px")]}   # Evidência
+        ]
+    ).apply(lambda s: [estilo(v, s.name) for v in s], axis=0)
 
-        styled = df.style.set_table_styles(
-            [
-                {"selector": "th", "props": [("text-align", "center"), ("padding", "8px")]},
-                {"selector": "td", "props": [("padding", "8px")]},
-                {"selector": "td.col0", "props": [("min-width", "340px")]},  # Pergunta
-                {"selector": "td.col1", "props": [("min-width", "140px")]},  # Predição
-                {"selector": "td.col2", "props": [("min-width", "140px")]},  # Probabilidade
-                {"selector": "td.col3", "props": [("min-width", "540px")]}   # Evidência
-            ]
-        ).apply(lambda s: [estilo(v, s.name) for v in s], axis=0)
+    # renderizar como html e centralizar
+    html_table = styled.to_html()
+    html_table = f'<div style="display: flex; justify-content: center;">{html_table}</div>'
+    st.markdown(html_table, unsafe_allow_html=True)
 
-        # renderizar como html e centralizar
-        html_table = styled.to_html()
-        html_table = f'<div style="display: flex; justify-content: center;">{html_table}</div>'
+    # selecionar pergunta para destaque
+    pergunta_sel = st.selectbox(
+        "Escolha uma pergunta para destacar:",
+        options=["Todas"] + list(df0["pergunta"].unique()),
+        index=0
+    )
 
-        st.markdown(html_table, unsafe_allow_html=True)
+    # destacar evidências no texto
+    st.subheader("Prontuário com Evidências Destacadas")
 
-        # destacar evidências no texto
-        st.subheader("Prontuário com Evidências Destacadas")
+    ttx = normalizar_prontuario(texto, unicode=False)
+    texto_norm = normalizar_prontuario(texto, unicode=False)
+    mapa = build_offset_map(ttx, texto_norm)
+    html_destacado = highlight_evidence(ttx, df0, mapa, pergunta_sel=pergunta_sel)
 
-        texto_norm = normalizar_prontuario(texto, unicode=False)
-        mapa = build_offset_map(texto, texto_norm)
-        html_destacado = highlight_evidence(texto, df0, mapa)
+    # 1. Mostrar a legenda (perguntas + quadradinhos coloridos) em Markdown
+    st.markdown(html_destacado.split("</div><br>", 1)[0], unsafe_allow_html=True)
 
-        # 1. Mostrar a legenda (perguntas + quadradinhos coloridos) em Markdown
-        st.markdown(html_destacado.split("</div><br>", 1)[0], unsafe_allow_html=True)
+    # 2. Mostrar o texto do prontuário destacado em uma caixa branca centralizada
+    prontuario_html = html_destacado.split("</div><br>", 1)[1]
 
-        # 2. Mostrar o texto do prontuário destacado em uma caixa branca centralizada
-        prontuario_html = html_destacado.split("</div><br>", 1)[1]
+    container_html = f"""
+    <div style="
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;">
+    <div style="
+        background-color: #2a2a2a;
+        color: #e0e0e0;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        width: 90%;
+        max-width: 1000px;
+        text-align: justify;
+        line-height: 1.5;
+        overflow-y: auto;
+        height: 600px;">
+        {prontuario_html}
+    </div>
+    </div>
+    """
+    components.html(container_html, height=650, scrolling=False)
 
-        container_html = f"""
-        <div style="
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;">
-        <div style="
-            background-color: #444444;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.15);
-            width: 90%;
-            max-width: 1000px;
-            text-align: justify;
-            line-height: 1.5;
-            overflow-y: auto;
-            height: 600px;">
-            {prontuario_html}
-        </div>
-        </div>
-        """
-
-        components.html(container_html, height=650, scrolling=False)
-
-        # botão de download
-        csv = df.to_csv(index=True)
-        st.download_button(
-            "Baixar resultado (.csv)",
-            data=csv,
-            file_name="resultado_prontuario.csv",
-            mime="text/csv",
-            use_container_width=True,
-        )
+    # botão de download
+    csv = df.to_csv(index=True)
+    st.download_button(
+        "Baixar resultado (.csv)",
+        data=csv,
+        file_name="resultado_prontuario.csv",
+        mime="text/csv",
+        use_container_width=True,
+    )
