@@ -10,3 +10,4 @@ pront_teste[:300]
 
 # Use the main function
 saida = evaluate_record(pront_teste, delta = 20)
+saida[0]

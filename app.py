@@ -85,7 +85,7 @@ st.warning("⚠️ Este é um protótipo em fase experimental. Os resultados pod
 
 # Sidebar
 with st.sidebar:
-    delta = st.number_input("delta", min_value=0, max_value=200, value=20, step=1)
+    delta = st.number_input("Tamanho da evidência", min_value=0, max_value=200, value=20, step=1)
     st.markdown("---")
     st.caption("Use UTF-8 nos arquivos .txt.")
 
@@ -167,11 +167,14 @@ if "df0" in st.session_state:
     st.markdown(html_table, unsafe_allow_html=True)
 
     # selecionar pergunta para destaque
-    pergunta_sel = st.selectbox(
-        "Escolha uma pergunta para destacar:",
-        options=["Todas"] + list(df0["pergunta"].unique()),
-        index=0
-    )
+    # colocar selectbox em uma coluna estreita
+    col1, col2 = st.columns([3, 6])  # ajusta proporções
+    with col1:
+        pergunta_sel = st.selectbox(
+            "Escolha uma pergunta:",
+            options=["Todas"] + list(df0["pergunta"].unique()),
+            index=0
+        )
 
     # destacar evidências no texto
     st.subheader("Prontuário com Evidências Destacadas")
