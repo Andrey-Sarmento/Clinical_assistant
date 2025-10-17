@@ -41,7 +41,7 @@ def normalizar_prontuario(x, unicode=True):
         x = unicodedata.normalize('NFKD', x)
         x = x.encode("ASCII", "ignore").decode("ASCII")
 
-    x = re.sub(r'(\r\n|\r|\n|\\n)+', ' ', x)
+    #x = re.sub(r'(\r\n|\r|\n|\\n)+', ' ', x)
     x = re.sub(r'[ \t]+', ' ', x)
     x = x.replace("•", "-").strip()
     return x
@@ -117,6 +117,7 @@ def extract_evidences(
 # Função principal
 # --------------------------------------------------------------------------------------------
 
+MAP_PRED = {0: "Sim", 1: "Não", 2: "Sem informação"}
 perguntas = [
         "O paciente tem doença falciforme?",
         "O paciente teve internações hospitalares?",
@@ -127,7 +128,6 @@ perguntas = [
         "O paciente está em terapia transfusional crônica?",
         "O paciente teve acidente vascular cerebral (infarto)?"
     ]
-MAP_PRED = {0: "Sim", 1: "Não", 2: "Sem informação"}
 
 
 def evaluate_record(pront_teste, delta=20):
