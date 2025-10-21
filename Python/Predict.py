@@ -52,7 +52,7 @@ def normalizar_prontuario(x, unicode=True):
 # --------------------------------------------------------------------------------------------
 
 device0 = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = torch.jit.load("Python/model_traced.pt", map_location=device0)
+model = torch.jit.load("Python/model_tracedLS2.pt", map_location=device0)
 _ = model.eval()  # modo avaliação (desativa dropout, batchnorm)
 
 
@@ -217,8 +217,6 @@ def highlight_evidence(prontuario, df, mapa, pergunta_sel="Todas"):
 
     spans, legendas = [], []
     for _, row in df.iterrows():
-        if row["pred"] not in ["Sim", "Não"]:
-            continue
         if pergunta_sel != "Todas" and row["pergunta"] != pergunta_sel:
             continue
 
