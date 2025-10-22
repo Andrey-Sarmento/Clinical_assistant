@@ -96,10 +96,12 @@ texto = ""
 with tab1:
     up = st.file_uploader("Carregue um prontuário (.txt)", type=["txt"])
     if up is not None:
-        texto = up.read().decode("utf-8")
+        texto = up.read().decode("utf-8", errors="ignore")
+        texto = texto.replace('\r\n', '\n').lstrip('\ufeff').strip()
 
 with tab2:
     texto = st.text_area("Cole o prontuário aqui", height=240, value=texto)
+    texto = texto.replace('\r\n', '\n').lstrip('\ufeff').strip()
 
 # Botões
 col1, col2 = st.columns([1, 1])

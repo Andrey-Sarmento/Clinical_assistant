@@ -12,38 +12,42 @@ import torch.nn.functional as F
 # --------------------------------------------------------------------------------------------
 # Funções de pré-processamento
 # --------------------------------------------------------------------------------------------
-
 with open("Dados/voc.txt", encoding="utf-8") as f:
-    VOC = f.read().splitlines() # lista de caracteres
+    VOC = [x.replace(r"\n", "\n") for x in f.read().splitlines()]
+
 
 vocab_index = {char: idx for idx, char in enumerate(VOC)}
 
 
 def Encoder(text):
-    """Converte texto em lista de índices do vocabulário."""
-    return [vocab_index.get(ch, vocab_index["<unk>"]) for ch in text]
+    """Converte texto em números, com base no vocabulário."""
+    chars = list(text)
+    indices = [vocab_index.get(char, vocab_index["<unk>"]) for char in chars]
+    return indices
 
 
 def fix_len(seq, target_len, pad=0):
-    """Trunca ou preenche a sequência até target_len."""
-    n = len(seq)
-    if n >= target_len:
+    """
+    Ajusta o comprimento de uma sequência para target_len.
+    - Se for menor: preenche com pad.
+    - Se for maior: corta no final.
+    """
+    seq = list(seq)
+    if len(seq) < target_len:
+        return seq + [pad] * (target_len - len(seq))
+    else:
         return seq[:target_len]
-    out = [pad] * target_len
-    out[:n] = seq
-    return out
 
 
 def normalizar_prontuario(x, unicode=True):
     """Normaliza texto: minúsculas, acentos, espaços e marcadores."""
+    x = x.replace("•", "-")
     if unicode:
         x = x.lower()
-        x = unicodedata.normalize('NFKD', x)
-        x = x.encode("ASCII", "ignore").decode("ASCII")
+        x = unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').decode('utf-8')
 
-    #x = re.sub(r'(\r\n|\r|\n|\\n)+', ' ', x)
     x = re.sub(r'[ \t]+', ' ', x)
-    x = x.replace("•", "-").strip()
+    x = x.strip()
     return x
 
 
@@ -52,8 +56,7 @@ def normalizar_prontuario(x, unicode=True):
 # --------------------------------------------------------------------------------------------
 
 device0 = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = torch.jit.load("Python/model_tracedLS2.pt", map_location=device0)
-_ = model.eval()  # modo avaliação (desativa dropout, batchnorm)
+model = torch.jit.load("Python/model_traced.pt", map_location=device0)
 
 
 def extract_evidences(
@@ -135,6 +138,7 @@ def evaluate_record(pront_teste, delta=20):
     X = Encoder(texto_norm)
     X = torch.tensor(fix_len(X, 2**13), dtype=torch.long).unsqueeze(0).to(device0)
     
+    _ = model.eval()
     with torch.no_grad():
         logits, scores, wei = model(X)
         probs = F.softmax(logits, dim=1).squeeze(0).T  # (8,3)
