@@ -62,7 +62,7 @@ model = torch.jit.load("Python/model_traced.pt", map_location=device0)
 def extract_evidences(
     scores, i, texto_norm, pred,
     delta=20, k=3, R=41, J=8,
-    min_ratio=0.2, sum_threshold=0.8, min_distance=5
+    min_ratio=0.2, sum_threshold=0.8, min_distance=2
 ):
     """
     Extrai evidências do texto normalizado para a questão i.
