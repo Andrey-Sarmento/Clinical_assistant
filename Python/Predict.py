@@ -135,42 +135,49 @@ perguntas = [
 
 def evaluate_record(pront_teste, delta=20):
     texto_norm = normalizar_prontuario(pront_teste, unicode=True)
+    texto_raw = normalizar_prontuario(pront_teste, unicode=False)
     X = Encoder(texto_norm)
     X = torch.tensor(fix_len(X, 2**13), dtype=torch.long).unsqueeze(0).to(device0)
     
     _ = model.eval()
     with torch.no_grad():
         logits, scores, wei = model(X)
-        probs = F.softmax(logits, dim=1).squeeze(0).T  # (8,3)
-        preds = torch.argmax(logits, dim=1).squeeze(0)
+        probs = F.softmax(logits, dim=1).squeeze(0).T
+        preds = torch.argmax(probs, dim=1)
 
     mapa = build_offset_map(pront_teste, texto_norm)
     linhas = []
+    dict_summary = {}
 
     for i, pergunta in enumerate(perguntas):
         pred_idx = preds[i].item()
         pred_label = MAP_PRED[pred_idx]
         prob_pred = round(float(probs[i][pred_idx]), 3)
-
         evids = extract_evidences(scores, i, texto_norm, pred_label, delta=delta)
 
         trechos = [
-            normalizar_prontuario(pront_teste, unicode=False)[mapa[s]:mapa[min(e, len(mapa)-1)]].strip()
+            texto_raw[mapa[s]:mapa[min(e, len(mapa)-1)]].strip()
             for s, e, _, _ in evids
         ]
-        evidencias_texto = "• " + "<br>• ".join(trechos) if trechos else ""
 
+        evid_list = [t for t in trechos if t]
+        evidencias_texto = "• " + "<br>• ".join(evid_list) if evid_list else ""
         starts, ends = zip(*[(s, e) for s, e, _, _ in evids]) if evids else ([], [])
-
         linhas.append([pergunta, pred_label, prob_pred, evidencias_texto, list(starts), list(ends)])
+        dict_summary[pergunta] = {
+            "pred": pred_label,
+            "prob": prob_pred,
+            "evidencias": trechos
+        }
 
     df = pd.DataFrame(
         linhas,
         columns=["pergunta", "pred", "prob", "evidencia", "start_norm", "end_norm"]
     )
     df["evidencia"] = df["evidencia"].str.replace(r"\s*\n\s*", " ", regex=True)
+    print(df.iloc[:, :4])
 
-    return df, scores, wei, mapa
+    return df, scores, wei, mapa, dict_summary
 
 
 # --------------------------------------------------------------------------------------------
