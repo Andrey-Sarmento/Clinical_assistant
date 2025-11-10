@@ -111,7 +111,7 @@ with col1:
             st.error("Forneça um texto.")
         else:
             with st.spinner("Processando..."):
-                df, scores, wei, _ = evaluate_record(texto, delta=delta)
+                df, scores, wei, _, _ = evaluate_record(texto, delta=delta)
 
             st.session_state["df0"] = df.copy()
             st.session_state["df"] = df
